@@ -1,11 +1,21 @@
 import React from "react";
+import { TailSpin } from "react-loader-spinner";
 
 const Spinner = () => {
-  return <div className="d-flex justify-content-center">
-    <div className="spinner-border" role="status">
-    <span className="sr-only">Loading...</span>
+  return (
+    <div className="d-flex justify-content-center">
+          <TailSpin
+            height="80"
+            width="80"
+            color="black"
+            ariaLabel="tail-spin-loading"
+            radius="1"
+            wrapperStyle={{}}
+            wrapperClass=""
+            visible={true}
+          />
     </div>
-  </div>;
+  );
 };
 
 export default Spinner;
