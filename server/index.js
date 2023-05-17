@@ -7,7 +7,14 @@ const schema = require("./schema/schema");
 const cors = require("cors");
 const connectDB = require("../server/config/db");
 
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "http://localhost:3000",
+      "https://ankit-opti-solution.onrender.com",
+    ],
+  })
+);
 
 app.use(
   "/graphql",
